@@ -25,4 +25,4 @@ restart: stop run
 reset:
 	@clear
 	@echo "* Reseting database..."
-	@sudo docker volume rm $$(docker volume ls -q)
+	@docker volume rm $(LAB_NAME)_postgres_data $(LAB_NAME)_pgadmin_data
