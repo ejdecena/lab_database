@@ -6,7 +6,7 @@ This repository is intended to be a platform or academic laboratory for database
 
 ## To install Docker:
 ```bash
-$ ./install-docker.sh
+$ make install
 ```
 
 ## To run the laboratory:
@@ -14,9 +14,11 @@ $ ./install-docker.sh
 $ make run
 ```
 
-From a web browser, access the address http://127.0.0.1:5050, and enter as username *user@gmail.com*, and as password *admin*.
-
 ![Login Pgadmin parameters](/images/login.png "Login Pgadmin parameters").
+
+GO TO http://{PGADMIN_ADDRESS}:{PGADMIN_PORT}
+Username: {PGADMIN_DEFAULT_EMAIL} in ```.env``` file.
+Password: {PGADMIN_DEFAULT_PASSWORD} in ```.env``` file.
 
 ## To access the Postgres container:
 ```bash
@@ -42,18 +44,17 @@ $ make restart
 ```bash
 $ make reset
 ```
-
 ## To connect Pgadmin to Postgres:
 ```bash
-$ docker inspect postgres_db
+$ make ip
 ```
 
-After executing the above command, copy the IP address of the given container into the *IPAddress* field and copy it into the connection parameters in Pgadmin. Other data for the connection are
+After executing the above command, copy the IP address and copy it into the connection parameters in Pgadmin. Other data for the connection are:
 
-* Host name / address: *IPAddress*
+* Host name / address: {IPAddress}
 * Port: 5432
-* Database: postgres
-* Username: user
-* Pass: admin
+* Database: {POSTGRES_DB} in ```.env``` file.
+* Username: {POSTGRES_USER} in ```.env``` file.
+* Pass: {POSTGRES_PASSWORD} in ```.env``` file.
 
 ![Connection parameters](/images/database_conexion.png "To connect Pgadmin to Postgres").

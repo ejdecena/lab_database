@@ -20,7 +20,7 @@ services:
     restart: always
     env_file: .env
     ports:
-      - "${LAB_LISTEN_ADDRESS}:${LAB_LISTEN_PORT}:80"
+      - "${PGADMIN_ADDRESS}:${PGADMIN_PORT}:80"
     networks:
       - backend_network
     depends_on:
