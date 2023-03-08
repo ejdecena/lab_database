@@ -16,9 +16,9 @@ $ make run
 
 ![Login Pgadmin parameters](/images/login.png "Login Pgadmin parameters").
 
-GO TO http://{PGADMIN_ADDRESS}:{PGADMIN_PORT}
-Username: {PGADMIN_DEFAULT_EMAIL} in ```.env``` file.
-Password: {PGADMIN_DEFAULT_PASSWORD} in ```.env``` file.
+* GO TO http://```{PGADMIN_ADDRESS}```:```{PGADMIN_PORT}```
+* Username: ```{PGADMIN_DEFAULT_EMAIL}``` in ```.env``` file.
+* Password: ```{PGADMIN_DEFAULT_PASSWORD}``` in ```.env``` file.
 
 ## To access the Postgres container:
 ```bash
@@ -51,10 +51,10 @@ $ make ip
 
 After executing the above command, copy the IP address and copy it into the connection parameters in Pgadmin. Other data for the connection are:
 
-* Host name / address: {IPAddress}
-* Port: 5432
-* Database: {POSTGRES_DB} in ```.env``` file.
-* Username: {POSTGRES_USER} in ```.env``` file.
-* Pass: {POSTGRES_PASSWORD} in ```.env``` file.
+* Host name / address: ```{IPAddress}```
+* Port: ```5432```
+* Database: ```{POSTGRES_DB}``` in ```.env``` file.
+* Username: ```{POSTGRES_USER}``` in ```.env``` file.
+* Pass: ```{POSTGRES_PASSWORD}``` in ```.env``` file.
 
 ![Connection parameters](/images/database_conexion.png "To connect Pgadmin to Postgres").
