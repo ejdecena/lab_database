@@ -9,7 +9,8 @@ services:
     ports:
       - "${POSTGRES_PORT}:5432"
     networks:
-      - backend_network
+      backend_network:
+        ipv4_address: 172.20.0.10
     volumes:
       - postgres_data:${POSTGRES_PGDATA}
       - ./config/postgresql.conf:/var/lib/postgresql/postgresql.conf
@@ -30,6 +31,9 @@ services:
 
 networks:
   backend_network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
 
 volumes:
   postgres_data:
