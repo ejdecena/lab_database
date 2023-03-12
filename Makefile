@@ -16,7 +16,7 @@ run:
 	@echo ""
 	@echo "*** PG ADMIN 4:"
 	@echo "GO TO http://$(PGADMIN_ADDRESS):$(PGADMIN_PORT)"
-	@echo "Username: $(PGADMIN_DEFAULT_EMAIL)"
+	@echo "Username: user@gmail.com"
 	@echo "Password: $(PGADMIN_DEFAULT_PASSWORD)"
 	@docker inspect postgres_db | grep -G '\"IPAddress\": \"1' | xargs | sed -r 's/(,)+//g'
 	@echo ""

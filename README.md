@@ -1,7 +1,7 @@
 # Database Laboratory.
 
 
-This repository is intended to be a platform or academic laboratory for database design and implementation. This laboratory is based on Docker technology to lift Postgres 15 and PgAdmin 4 services in a Linux environment, mainly.
+This repository is intended to be a platform or academic laboratory for database design and implementation. This laboratory is based on Docker technology to lift Postgres 15 and PgAdmin4 services in a Linux environment, mainly.
 
 
 ## To install Docker:
@@ -17,7 +17,7 @@ $ make run
 ![Login Pgadmin parameters](/images/login.png "Login Pgadmin parameters").
 
 * GO TO http://```{PGADMIN_ADDRESS}```:```{PGADMIN_PORT}```
-* Username: ```{PGADMIN_DEFAULT_EMAIL}``` in ```.env``` file.
+* Username: ```user@gmail.com```.
 * Password: ```{PGADMIN_DEFAULT_PASSWORD}``` in ```.env``` file.
 
 ## To access the Postgres container:
