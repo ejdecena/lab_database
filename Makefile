@@ -20,9 +20,6 @@ run:
 	@echo "Password: $(PGADMIN_DEFAULT_PASSWORD)"
 	@docker inspect postgres_db | grep -G '\"IPAddress\": \"1' | xargs | sed -r 's/(,)+//g'
 	@echo ""
-ip:
-	@clear
-	@docker inspect postgres_db | grep -G '\"IPAddress\": \"1' | xargs | sed -r 's/(,)+//g'
 psql:
 	@clear
 	@echo "* Postgres."

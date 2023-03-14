@@ -44,14 +44,12 @@ $ make restart
 ```bash
 $ make reset
 ```
+
 ## To connect Pgadmin to Postgres:
-```bash
-$ make ip
-```
 
-After executing the above command, copy the IP address and copy it into the connection parameters in Pgadmin. Other data for the connection are:
+The data for the connection are:
 
-* Host name / address: ```{IPAddress}```
+* Host name / address: ```postgres_db```
 * Port: ```5432```
 * Database: ```{POSTGRES_DB}``` in ```.env``` file.
 * Username: ```{POSTGRES_USER}``` in ```.env``` file.
