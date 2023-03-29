@@ -25,7 +25,6 @@ docker -v
 
 # Step 8: Grant permissions to non-root users to run Docker commands:
 sudo groupadd docker
-sudo usermod -aG docker $USER
 
 # Step 9: Reboot your terminal.
 echo "READY. Reboot or log out from the terminal!"

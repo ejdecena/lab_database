@@ -4,9 +4,13 @@
 This repository is intended to be a platform or academic laboratory for database design and implementation. This laboratory is based on Docker technology to lift Postgres 15 and PgAdmin4 services in a Linux environment, mainly.
 
 
-## To install Docker:
+### To install:
 ```bash
+$ sudo apt install make
 $ make install
+$ sudo usermod -aG docker $USER
+$ sudo service docker start
+Restart the terninal.
 ```
 
 ## To run the laboratory:
