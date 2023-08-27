@@ -28,7 +28,7 @@ $ make run
 ![Login Pgadmin parameters](/images/login.png "Login Pgadmin parameters").
 
 ## To register a server in pgAdmin4:
-Al iniciar sesión por primera vez, habrá que registrar un servidor. Para ello, hacer click derecho sobre la opción Servers:
+When you log in for the first time, you will have to register a server. To do this, right click on the Servers option:
 
 ![Register Server](/images/register_server.png "Register Server").
 
