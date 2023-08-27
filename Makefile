@@ -19,7 +19,7 @@ run:
 	@echo "Username: user@gmail.com"
 	@echo "Password: $(PGADMIN_DEFAULT_PASSWORD)"
 	@echo ""
-	@sudo chown -R 5050:5050 ./storage
+# @chown -R 5050:5050 ./storage
 	@docker exec -it -u root pgadmin4 chown -R 5050:5050 /var/lib/pgadmin/storage
 psql:
 	@clear

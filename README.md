@@ -28,7 +28,7 @@ $ make run
 ![Login Pgadmin parameters](/images/login.png "Login Pgadmin parameters").
 
 ## To register a server in pgAdmin4:
-Al iniciar sesión por primera vez, habrá que registrar un servidor. Para ello, hacer click derecho sobre la opción servers:
+Al iniciar sesión por primera vez, habrá que registrar un servidor. Para ello, hacer click derecho sobre la opción Servers:
 
 ![Register Server](/images/register_server.png "Register Server").
 
@@ -41,8 +41,6 @@ The data for the connection are:
 * Database: ```{POSTGRES_DB}``` in ```.env``` file.
 * Username: ```{POSTGRES_USER}``` in ```.env``` file.
 * Pass: ```{POSTGRES_PASSWORD}``` in ```.env``` file.
-
-Completar los datos de la conexión con los datos que se muestran en el capture de abajo:
 
 ![Server Connection](/images/server_connection.png "Server Connection").
 
