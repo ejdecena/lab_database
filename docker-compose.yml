@@ -20,7 +20,7 @@ services:
     restart: always
     env_file: .env
     environment:
-      - PGADMIN_DEFAULT_EMAIL = user@gmail.com
+      - PGADMIN_DEFAULT_EMAIL=user@gmail.com
     ports:
       - "${PGADMIN_ADDRESS}:${PGADMIN_PORT}:80"
     networks:
@@ -29,15 +29,11 @@ services:
       - postgres_db
     volumes:
       - pgadmin_data:/var/lib/pgadmin
-      # To fix permission error:
-      # sudo chown -R 5050:5050 ./storage
-      # docker exec -it -u root pgadmin4 sh
-      # cd /var/lib/pgadmin
-      # chown -R 5050:5050 ./storage
       - ./storage:/var/lib/pgadmin/storage/user_gmail.com
 
 networks:
   backend_network:
+
 
 volumes:
   postgres_data:

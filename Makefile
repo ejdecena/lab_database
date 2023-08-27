@@ -8,7 +8,7 @@ include .env
 install:
 	@clear
 	@echo "* Installing docker..."
-	@./install-docker.sh
+	@bash install-docker.sh
 run:
 	@clear
 	@echo "* Running..."
@@ -18,8 +18,9 @@ run:
 	@echo "GO TO http://$(PGADMIN_ADDRESS):$(PGADMIN_PORT)"
 	@echo "Username: user@gmail.com"
 	@echo "Password: $(PGADMIN_DEFAULT_PASSWORD)"
-	@docker inspect postgres_db | grep -G '\"IPAddress\": \"1' | xargs | sed -r 's/(,)+//g'
 	@echo ""
+	@sudo chown -R 5050:5050 ./storage
+	@docker exec -it -u root pgadmin4 chown -R 5050:5050 /var/lib/pgadmin/storage
 psql:
 	@clear
 	@echo "* Postgres."

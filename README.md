@@ -1,16 +1,18 @@
 # Database Laboratory.
 
 
-This repository is intended to be a platform or academic laboratory for database design and implementation. This laboratory is based on Docker technology to lift Postgres 15 and PgAdmin4 services in a Linux environment, mainly.
+This repository is intended to be a platform or academic laboratory for database design and implementation. This laboratory is based on Docker technology to lift PostgreSQL 15 and pgAdmin4 services in a Linux environment, mainly.
 
 
 ### To install:
 ```bash
+$ git clone https://github.com/ejdecena/lab_database
+$ cd lab_database
 $ sudo apt install make
 $ make install
 $ sudo usermod -aG docker $USER
 $ sudo service docker start
-Restart the terninal.
+close the terninal.
 ```
 
 ## To run the laboratory:
@@ -18,13 +20,33 @@ Restart the terninal.
 $ make run
 ```
 
-![Login Pgadmin parameters](/images/login.png "Login Pgadmin parameters").
-
 * GO TO http://```{PGADMIN_ADDRESS}```:```{PGADMIN_PORT}```
 * Username: ```user@gmail.com```.
 * Password: ```{PGADMIN_DEFAULT_PASSWORD}``` in ```.env``` file.
 
-## To access the Postgres container:
+## To login in pgAdmin4:
+![Login Pgadmin parameters](/images/login.png "Login Pgadmin parameters").
+
+## To register a server in pgAdmin4:
+Al iniciar sesión por primera vez, habrá que registrar un servidor. Para ello, hacer click derecho sobre la opción servers:
+
+![Register Server](/images/register_server.png "Register Server").
+
+## To connect pgAdmin4 to PostgreSQL:
+
+The data for the connection are:
+
+* Host name / address: ```postgres_db```
+* Port: ```5432```
+* Database: ```{POSTGRES_DB}``` in ```.env``` file.
+* Username: ```{POSTGRES_USER}``` in ```.env``` file.
+* Pass: ```{POSTGRES_PASSWORD}``` in ```.env``` file.
+
+Completar los datos de la conexión con los datos que se muestran en el capture de abajo:
+
+![Server Connection](/images/server_connection.png "Server Connection").
+
+## To access the PostgreSQL container:
 ```bash
 $ make psql
 ```
@@ -48,15 +70,3 @@ $ make restart
 ```bash
 $ make reset
 ```
-
-## To connect Pgadmin to Postgres:
-
-The data for the connection are:
-
-* Host name / address: ```postgres_db```
-* Port: ```5432```
-* Database: ```{POSTGRES_DB}``` in ```.env``` file.
-* Username: ```{POSTGRES_USER}``` in ```.env``` file.
-* Pass: ```{POSTGRES_PASSWORD}``` in ```.env``` file.
-
-![Connection parameters](/images/database_conexion.png "To connect Pgadmin to Postgres").
