@@ -1,4 +1,4 @@
-/*
+/* CASO DE ESTUDIO BANCO.
 */
 
 -- DROP DATABASE IF EXISTS banco;
@@ -15,7 +15,8 @@ CREATE TABLE cliente (
 	nombre varchar(20) NOT NULL,
 	fecha_creacion date NOT NULL DEFAULT CURRENT_DATE,
 	CONSTRAINT pk_cliente PRIMARY KEY (cliente_id),
-	CONSTRAINT un_cliente UNIQUE (tipo_doc, num_doc)
+	CONSTRAINT un_cliente UNIQUE (tipo_doc, num_doc),
+	CONSTRAINT ch_cliente_tipo_doc CHECK (tipo_doc IN ('V', 'E', 'J', 'G'))
 );
 
 CREATE TABLE cuenta (
