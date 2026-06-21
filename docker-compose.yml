@@ -1,8 +1,7 @@
 version: "3.8"
 services:
-
   postgres_db:
-    image: postgres:15
+    image: postgres:18
     container_name: postgres_db
     restart: always
     env_file: .env
@@ -15,7 +14,7 @@ services:
       - ./config/postgresql.conf:/var/lib/postgresql/postgresql.conf
 
   pgadmin4:
-    image: dpage/pgadmin4:6
+    image: elestio/pgadmin:REL-9_15
     container_name: pgadmin4
     restart: always
     env_file: .env
@@ -33,7 +32,6 @@ services:
 
 networks:
   backend_network:
-
 
 volumes:
   postgres_data:
