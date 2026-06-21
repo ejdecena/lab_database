@@ -1,7 +1,7 @@
 # Database Laboratory.
 
 
-This repository is intended to be a platform or academic laboratory for database design and implementation. This laboratory is based on Docker technology to lift PostgreSQL 15 and pgAdmin4 services in a Linux environment, mainly.
+This repository is intended to be a platform or academic laboratory for database design and implementation. This laboratory is based on Docker technology to lift PostgreSQL 18 and pgAdmin4 services in a Linux environment, mainly.
 
 
 ### To install:
